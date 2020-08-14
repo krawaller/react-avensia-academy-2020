@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "newLine": "LF",
+    "target": "es5",
+    "outDir": ".out",
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "lib": ["es2019", "dom"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "exclude": [".git", "node_modules"]
+}
