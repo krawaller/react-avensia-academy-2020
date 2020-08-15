@@ -3,7 +3,7 @@ import { makeStory } from '../../utils'
 
 // This default export determines where you story goes in the story list
 export default {
-  title: 'HelloSomeone',
+  title: 'React/Intro/HelloSomeone',
   component: HelloSomeone,
 }
 
