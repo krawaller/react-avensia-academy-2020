@@ -6,7 +6,6 @@ export type UnitPresentationProps = {
 }
 
 export const UnitPresentation = ({ unit }: UnitPresentationProps) => {
-  console.log(unit.image, !!base64[unit.image])
   return (
     <div>
       {unit.name}{' '}
