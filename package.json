@@ -16,6 +16,7 @@
     "@nodecraft/ini": "^1.4.0",
     "@storybook/addon-actions": "^6.0.6",
     "@storybook/addon-essentials": "^6.0.6",
+    "@storybook/addon-knobs": "^6.0.10",
     "@storybook/addon-links": "^6.0.6",
     "@storybook/react": "^6.0.6",
     "@testing-library/jest-dom": "^5.11.3",
