@@ -1,5 +1,5 @@
 import React from 'react'
-import { Unit, base64 } from '../../data/wesnoth'
+import { Unit, base64 } from '../../toys/wesnoth'
 
 export type UnitPresentationProps = {
   unit: Unit

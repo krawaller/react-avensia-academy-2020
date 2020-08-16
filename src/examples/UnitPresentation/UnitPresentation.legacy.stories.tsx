@@ -2,7 +2,7 @@ import React from 'react'
 import { select } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import { UnitPresentation } from './UnitPresentation'
-import { units, unitIds } from '../../data/wesnoth'
+import { units, unitIds } from '../../toys/wesnoth'
 
 // Old stories syntax, to use legacy knobs with select which isn't supported in new controls yet
 

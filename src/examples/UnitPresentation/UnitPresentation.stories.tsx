@@ -1,6 +1,6 @@
 import { UnitPresentation } from './UnitPresentation'
 import { makeStory } from '../../utils'
-import { units } from '../../data/wesnoth'
+import { units } from '../../toys/wesnoth'
 
 export default {
   title: 'React/Intro/UnitPresentation',
