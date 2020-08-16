@@ -3,6 +3,7 @@ import { MemorySession } from './types'
 
 describe('the performMove function', () => {
   let session: MemorySession
+  let result: MemorySession
   describe('when touching a revealed tile when no other tiles are revealed', () => {
     beforeEach(() => {
       session = {
@@ -14,9 +15,10 @@ describe('the performMove function', () => {
           { type: 1, status: 'hidden' },
         ],
       }
+      result = performMove({ session, tileIdx: 1 })
     })
     test('nothing happens', () => {
-      expect(performMove({ session, tileIdx: 1 })).toEqual(session)
+      expect(result).toEqual(session)
     })
   })
   describe('when touching a revealed tile when another tile is revealed', () => {
@@ -32,15 +34,32 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 3 })
     })
     test('both are flipped back', () => {
-      expect(performMove({ session, tileIdx: 3 })).toEqual({
+      expect(result).toEqual({
         lives: 3,
         tiles: [
           { type: 0, status: 'hidden' },
           { type: 0, status: 'hidden' }, // <- became hidden
           { type: 1, status: 'hidden' },
           { type: 1, status: 'hidden' }, // <- became hidden
+          { type: 2, status: 'done' },
+          { type: 2, status: 'done' },
+        ],
+      })
+    })
+    test('a new object was returned', () => {
+      expect(result).not.toBe(session)
+    })
+    test('we did not mutate the old session', () => {
+      expect(session).toEqual({
+        lives: 3,
+        tiles: [
+          { type: 0, status: 'hidden' },
+          { type: 0, status: 'revealed' },
+          { type: 1, status: 'hidden' },
+          { type: 1, status: 'revealed' },
           { type: 2, status: 'done' },
           { type: 2, status: 'done' },
         ],
@@ -60,9 +79,10 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 4 })
     })
     test('nothing happens', () => {
-      expect(performMove({ session, tileIdx: 4 })).toEqual(session)
+      expect(result).toEqual(session)
     })
   })
   describe('when touching a hidden tile and none is revealed', () => {
@@ -78,9 +98,10 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 2 })
     })
     test('that tile is revealed', () => {
-      expect(performMove({ session, tileIdx: 2 })).toEqual({
+      expect(result).toEqual({
         lives: 3,
         tiles: [
           { type: 0, status: 'hidden' },
@@ -106,9 +127,10 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 1 })
     })
     test('both are made done', () => {
-      expect(performMove({ session, tileIdx: 1 })).toEqual({
+      expect(result).toEqual({
         lives: 3,
         tiles: [
           { type: 0, status: 'done' }, // <- became done
@@ -134,9 +156,10 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 2 })
     })
     test('the hidden tile is revealed and lives is diminished', () => {
-      expect(performMove({ session, tileIdx: 2 })).toEqual({
+      expect(result).toEqual({
         lives: 2, // <- was lowered by 1
         tiles: [
           { type: 0, status: 'revealed' },
@@ -162,9 +185,10 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
+      result = performMove({ session, tileIdx: 3 })
     })
     test('nothing happens', () => {
-      expect(performMove({ session, tileIdx: 3 })).toEqual(session)
+      expect(result).toEqual(session)
     })
   })
 })
