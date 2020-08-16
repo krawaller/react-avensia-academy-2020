@@ -1,7 +1,7 @@
-import { performMove } from './performMove'
+import { flipTile } from './flipTile'
 import { MemorySession } from './types'
 
-describe('the performMove function', () => {
+describe('the flipTile function', () => {
   let session: MemorySession
   let result: MemorySession
   describe('when touching a revealed tile when no other tiles are revealed', () => {
@@ -15,7 +15,7 @@ describe('the performMove function', () => {
           { type: 1, status: 'hidden' },
         ],
       }
-      result = performMove({ session, tileIdx: 1 })
+      result = flipTile({ session, tileIdx: 1 })
     })
     test('nothing happens', () => {
       expect(result).toEqual(session)
@@ -34,7 +34,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 3 })
+      result = flipTile({ session, tileIdx: 3 })
     })
     test('both are flipped back', () => {
       expect(result).toEqual({
@@ -79,7 +79,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 4 })
+      result = flipTile({ session, tileIdx: 4 })
     })
     test('nothing happens', () => {
       expect(result).toEqual(session)
@@ -98,7 +98,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 2 })
+      result = flipTile({ session, tileIdx: 2 })
     })
     test('that tile is revealed', () => {
       expect(result).toEqual({
@@ -127,7 +127,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 1 })
+      result = flipTile({ session, tileIdx: 1 })
     })
     test('both are made done', () => {
       expect(result).toEqual({
@@ -156,7 +156,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 2 })
+      result = flipTile({ session, tileIdx: 2 })
     })
     test('the hidden tile is revealed and lives is diminished', () => {
       expect(result).toEqual({
@@ -185,7 +185,7 @@ describe('the performMove function', () => {
           { type: 2, status: 'done' },
         ],
       }
-      result = performMove({ session, tileIdx: 3 })
+      result = flipTile({ session, tileIdx: 3 })
     })
     test('nothing happens', () => {
       expect(result).toEqual(session)

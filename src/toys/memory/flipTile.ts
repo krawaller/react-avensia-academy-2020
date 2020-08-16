@@ -2,12 +2,12 @@ import produce from 'immer'
 import { getMemorySessionStatus } from './getMemorySessionStatus'
 import { MemorySession } from './types'
 
-type PerformMoveOpts = {
+type FlipTileOpts = {
   session: MemorySession
   tileIdx: number
 }
 
-export function performMove(opts: PerformMoveOpts) {
+export function flipTile(opts: FlipTileOpts) {
   const { session, tileIdx } = opts
   // Using Immer so we don't need to worry about mutating existing session
   return produce(session, (draft) => {
