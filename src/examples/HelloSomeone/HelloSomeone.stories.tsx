@@ -7,4 +7,6 @@ export default {
   component: HelloSomeone,
 }
 
-export const HelloAvensia = makeStory(HelloSomeone, { name: 'Avensia' })
+export const HelloAvensia = makeStory(HelloSomeone, {
+  name: 'Avensia',
+})

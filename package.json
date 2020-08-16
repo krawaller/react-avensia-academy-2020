@@ -4,7 +4,8 @@
     "start": "parcel ./runLocally/index.html",
     "test:unit": "jest",
     "test:lint": "eslint src .eslintplugin .storybook --ext .js,.jsx,.mjs,.ts,.tsx",
-    "test": "npm run test:unit && npm run test:lint",
+    "test:ts": "tsc --noEmit --skipLibCheck",
+    "test": "npm run test:ts && test:unit && npm run test:lint",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
