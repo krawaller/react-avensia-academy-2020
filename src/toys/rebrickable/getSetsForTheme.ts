@@ -6,6 +6,9 @@ type APISetsResult = {
   results: RebrickableSet[]
 }
 
+/**
+ * Queries the API for all sets for the given theme
+ */
 export const getSetsForTheme = (themeId: number) =>
   fetch(
     `https://rebrickable.com/api/v3/lego/sets/?page_size=1000&theme_id=${themeId}&key=${token}`
