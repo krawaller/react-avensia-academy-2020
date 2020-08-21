@@ -1,8 +1,8 @@
-import { getMemorySessionStatus } from './getMemorySessionStatus'
+import { getSessionStatus } from './getSessionStatus'
 
 describe('the getMemoryGameStatus function', () => {
   describe('when no errors left', () => {
-    const res = getMemorySessionStatus({
+    const res = getSessionStatus({
       tiles: [],
       lives: 0,
     })
@@ -11,7 +11,7 @@ describe('the getMemoryGameStatus function', () => {
     })
   })
   describe('when all tiles are done', () => {
-    const res = getMemorySessionStatus({
+    const res = getSessionStatus({
       tiles: [
         { type: 1, status: 'done' },
         { type: 1, status: 'done' },
@@ -23,7 +23,7 @@ describe('the getMemoryGameStatus function', () => {
     })
   })
   describe('when single tile is revealed', () => {
-    const res = getMemorySessionStatus({
+    const res = getSessionStatus({
       tiles: [
         { type: 1, status: 'hidden' },
         { type: 1, status: 'revealed' },
@@ -35,7 +35,7 @@ describe('the getMemoryGameStatus function', () => {
     })
   })
   describe('when two tiles are revealed', () => {
-    const res = getMemorySessionStatus({
+    const res = getSessionStatus({
       tiles: [
         { type: 1, status: 'revealed' },
         { type: 1, status: 'revealed' },

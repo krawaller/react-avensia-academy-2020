@@ -1,17 +1,26 @@
 import produce from 'immer'
-import { getMemorySessionStatus } from './getMemorySessionStatus'
+import { getSessionStatus } from './getSessionStatus'
 import { MemorySession } from './types'
 
 type FlipTileOpts = {
+  /**
+   * The session to flip a tile in
+   */
   session: MemorySession
+  /**
+   * Index of the tile to flip
+   */
   tileIdx: number
 }
 
+/**
+ * The main Memory logic function, where we flip tiles!
+ */
 export function flipTile(opts: FlipTileOpts) {
   const { session, tileIdx } = opts
   // Using Immer so we don't need to worry about mutating existing session
   return produce(session, (draft) => {
-    const sessionStatus = getMemorySessionStatus(draft)
+    const sessionStatus = getSessionStatus(draft)
     const clickedTile = draft.tiles[tileIdx]
 
     // Ignore pointless clicks

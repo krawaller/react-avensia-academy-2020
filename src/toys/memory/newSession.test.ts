@@ -1,8 +1,8 @@
-import { getNewMemorySession } from './getNewMemorySession'
+import { newSession } from './newSession'
 
-describe('the getNewMemorySession function', () => {
+describe('the newSession function', () => {
   describe('for 2 types and 3 errors allowed', () => {
-    const res = getNewMemorySession({ nbrOfTypes: 2, nbrOfLives: 3 })
+    const res = newSession({ nbrOfTypes: 2, nbrOfLives: 3 })
     test('we get correct number of errors', () => {
       expect(res.lives).toBe(3)
     })
@@ -23,7 +23,7 @@ describe('the getNewMemorySession function', () => {
     })
   })
   describe('for 3 types and 5 errors allowed', () => {
-    const res = getNewMemorySession({ nbrOfTypes: 3, nbrOfLives: 5 })
+    const res = newSession({ nbrOfTypes: 3, nbrOfLives: 5 })
     test('we get correct number of errors', () => {
       expect(res.lives).toBe(5)
     })

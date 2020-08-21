@@ -1,3 +1,3 @@
-export * from './getMemorySessionStatus'
-export * from './getNewMemorySession'
+export * from './getSessionStatus'
+export * from './newSession'
 export * from './flipTile'
