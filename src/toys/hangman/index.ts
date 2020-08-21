@@ -1,5 +1,5 @@
 export * from './getRevealedLetters'
 export * from './getNbrOfErrors'
 export * from './getSessionStatus'
-export * from './getNewGame'
+export * from './newSession'
 export * from './performGuess'

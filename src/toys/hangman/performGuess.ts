@@ -2,7 +2,13 @@ import { getSessionStatus } from './getSessionStatus'
 import { HangmanSession } from './types'
 
 type PerformGuessOpts = {
+  /**
+   * The guess to be made (a letter or a word)
+   */
   guess: string
+  /**
+   * The session to make the guess in
+   */
   session: HangmanSession
 }
 
