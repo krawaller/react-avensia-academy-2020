@@ -1,6 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import { GlitzClient } from '@glitz/core'
+import { GlitzProvider } from '@glitz/react'
+import { glitzOptions } from '../glitz.options'
+let glitz = new GlitzClient(glitzOptions)
+
 /*
 To run a component locally, simply...
 
@@ -13,6 +18,8 @@ To run a component locally, simply...
 import { HelloSomeone } from '../src/examples/HelloSomeone'
 
 ReactDOM.render(
-  <HelloSomeone name={'Avensia'} />,
+  <GlitzProvider glitz={glitz}>
+    <HelloSomeone name={'Avensia'} />
+  </GlitzProvider>,
   document.getElementById('root')
 )
