@@ -3,7 +3,7 @@ import { makeStory } from '../../../utils'
 import { units } from '../../../toys/wesnoth'
 
 export default {
-  title: 'React/Intro/UnitPresentation',
+  title: 'Day 1/Props/UnitPresentation',
   component: UnitPresentation,
 }
 
