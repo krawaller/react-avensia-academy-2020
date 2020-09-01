@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { UnitPresentation } from './UnitPresentation'
-import { units } from '../../toys/wesnoth'
+import { units } from '../../../toys/wesnoth'
 
 describe('the UnitPresentation component', () => {
   it('renders as expected', () => {

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "start": "parcel ./runLocally/index.html",
+    "local": "parcel ./runLocally/index.html",
     "test:unit": "jest",
     "test:lint": "eslint src .eslintplugin .storybook --ext .js,.jsx,.mjs,.ts,.tsx",
     "test:ts": "tsc --noEmit --skipLibCheck",

@@ -1,5 +1,5 @@
 import { HelloSomeone } from './HelloSomeone'
-import { makeStory } from '../../utils'
+import { makeStory } from '../../../utils'
 
 // This default export determines where you story goes in the story list
 export default {
