@@ -20,6 +20,6 @@
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "global.d.ts"],
   "exclude": [".git", "node_modules"]
 }
