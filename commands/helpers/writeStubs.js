@@ -6,7 +6,6 @@ const { fchmodSync } = require('fs-extra')
 const root = path.join(__dirname, '../..')
 
 module.exports = function writeStubs(target) {
-  console.log('TARGET', target)
   const steps = target.split('/')
   const head = steps.pop()
   const name = head[0].toUpperCase() + head.slice(1)
