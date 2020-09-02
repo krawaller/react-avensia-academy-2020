@@ -13,7 +13,7 @@ module.exports = function writeStubs(target) {
   if (fs.existsSync(out)) {
     throw new Error(`Folder ${out} already exists!`)
   }
-  fs.mkdirSync(out)
+  fs.ensureDirSync(out)
 
   const files = {
     [`${name}.test.tsx`]: templates.testTemplate,
