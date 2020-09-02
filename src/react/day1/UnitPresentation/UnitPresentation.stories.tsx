@@ -1,16 +1,10 @@
+import React from 'react'
+import { select } from '@storybook/addon-knobs'
+import { storiesOf } from '@storybook/react'
 import { UnitPresentation } from './UnitPresentation'
-import { makeStory } from '../../../utils'
-import { units } from '../../../toys/wesnoth'
+import { units, unitIds } from '../../../toys/wesnoth'
 
-export default {
-  title: 'Day 1/Props/UnitPresentation',
-  component: UnitPresentation,
-}
-
-export const Bat = makeStory(UnitPresentation, { unit: units['Blood Bat'] })
-export const WoseSapling = makeStory(UnitPresentation, {
-  unit: units['Wose Sapling'],
-})
-export const OrcishGrunt = makeStory(UnitPresentation, {
-  unit: units['Orcish Grunt'],
+storiesOf('Day 1/Props/UnitPresentation', module).add('dropdown knob', () => {
+  const unitId = select('Unit', unitIds, 'Blood Bat')
+  return <UnitPresentation unit={units[unitId]} />
 })

@@ -6,6 +6,7 @@ export type UnitPresentationProps = {
 }
 
 export const UnitPresentation = ({ unit }: UnitPresentationProps) => {
+  console.log(unit)
   return (
     <div>
       {unit.name}{' '}
