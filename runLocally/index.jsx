@@ -15,10 +15,10 @@ To run a component locally, simply...
 - make changes to the code and the browser will immediately update!
 */
 
-import { Hello } from '../src/react/day1/Hello/Hello.Jsx'
+import { Carolus } from '../src/react/day1/Carolus/Carolus.Glitz'
+const jsx = <Carolus />
 
 ReactDOM.render(
-  <Hello />,
-
+  <GlitzProvider glitz={glitz}>{jsx}</GlitzProvider>,
   document.getElementById('root')
 )

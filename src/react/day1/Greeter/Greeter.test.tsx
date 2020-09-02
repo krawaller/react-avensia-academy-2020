@@ -1,16 +1,16 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { HelloSomeone } from './HelloSomeone'
+import { Greeter } from './Greeter'
 
-describe('the HelloWorld component', () => {
+describe('the Greeter component', () => {
   it('renders the given name', () => {
     const name = 'Knork'
-    const { queryAllByText } = render(<HelloSomeone name={name} />)
+    const { queryAllByText } = render(<Greeter name={name} />)
 
     expect(queryAllByText(`Hello ${name}`)).toBeTruthy()
   })
   it('uses "world" as fallback', () => {
-    const { queryAllByText } = render(<HelloSomeone />)
+    const { queryAllByText } = render(<Greeter />)
 
     expect(queryAllByText(`Hello world`)).toBeTruthy()
   })

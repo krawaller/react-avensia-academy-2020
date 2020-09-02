@@ -4,18 +4,16 @@ export const Hello = () => {
     key: null,
     ref: null,
     type: 'div',
-    attrs: {
-      className: 'content',
-    },
     props: {
+      className: 'content',
       children: [
         {
           $$typeof: Symbol.for('react.element'),
           key: null,
           ref: null,
           type: 'h3',
-          attrs: { id: 'hello' },
           props: {
+            id: 'hello',
             children: 'Hello Avensians!',
           },
         },

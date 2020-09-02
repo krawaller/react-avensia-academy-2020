@@ -1,7 +1,6 @@
 const path = require('path')
 const fs = require('fs-extra')
 const templates = require('./templates')
-const { fchmodSync } = require('fs-extra')
 
 const root = path.join(__dirname, '../..')
 
@@ -18,7 +17,7 @@ module.exports = function writeStubs(target) {
 
   const files = {
     [`${name}.test.tsx`]: templates.testTemplate,
-    [`${name}.legacy.stories.tsx`]: templates.legacyStoryTemplate,
+    [`${name}.stories.tsx`]: templates.legacyStoryTemplate,
     [`${name}.tsx`]: templates.compTemplate,
     'index.ts': templates.indexTemplate,
   }

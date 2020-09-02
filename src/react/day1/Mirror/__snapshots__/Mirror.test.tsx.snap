@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Mirror component using snapshot testing renders as expected when lying 1`] = `
+<div>
+  <p>
+    The fairest in the land is Snow white!
+  </p>
+</div>
+`;
+
+exports[`the Mirror component using snapshot testing renders as expected when truthful 1`] = `
+<div>
+  <p>
+    The fairest in the land is you my queen!
+  </p>
+</div>
+`;

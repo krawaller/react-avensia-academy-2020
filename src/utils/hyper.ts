@@ -16,7 +16,13 @@ const maker = (elem: string, ...args: any[]) => {
       children.push(input)
     }
   }
-  return React.createElement(elem, attrs, children)
+  return React.createElement(
+    elem,
+    attrs,
+    children.map((c, n) =>
+      typeof c === 'object' && !c.key ? { ...c, key: n } : c
+    )
+  )
 }
 
 const factory = (elem: string) => (...args: any[]) => maker(elem, ...args)
