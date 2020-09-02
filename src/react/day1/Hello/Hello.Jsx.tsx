@@ -10,7 +10,7 @@ export const Hello = () => {
         <li>Board games</li>
         <li>Folk metal</li>
       </ul>
-      <p>Let's be friends!</p>
+      <p>Let&apos;s be friends!</p>
     </div>
   )
 }

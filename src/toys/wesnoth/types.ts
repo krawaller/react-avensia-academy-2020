@@ -58,7 +58,7 @@ type AttackNote =
   | 'plague'
   | 'poison'
   | 'slow'
-type Race =
+export type RaceName =
   | 'bats'
   | 'drake'
   | 'dunefolk'
@@ -134,7 +134,7 @@ type MovementType =
 export type Unit = {
   id: string
   name: string
-  race: Race
+  race: RaceName
   /**
    * This can be used to index the base64 image object
    */
