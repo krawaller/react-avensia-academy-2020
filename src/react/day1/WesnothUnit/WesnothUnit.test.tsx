@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { UnitPresentation } from './UnitPresentation'
+import { WesnothUnit } from './WesnothUnit'
 import { units } from '../../../toys/wesnoth'
 
-describe('the UnitPresentation component', () => {
+describe('the WesnothUnit component', () => {
   it('renders as expected', () => {
-    const { container } = render(<UnitPresentation unit={units.Assassin} />)
+    const { container } = render(<WesnothUnit unit={units.Assassin} />)
     expect(container).toMatchSnapshot()
   })
 })
