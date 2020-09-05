@@ -6,13 +6,13 @@ describe('the Mirror component', () => {
   describe('using logical testing', () => {
     it('mentions snow white when truthful', () => {
       const { queryAllByText } = render(<Mirror truthful />)
-      expect(queryAllByText(/snow ?white/i)).toBeTruthy()
-      expect(queryAllByText('you')).toBeFalsy()
+      expect(queryAllByText(/snow ?white/i)).toHaveLength(1)
+      expect(queryAllByText(/you/)).toHaveLength(0)
     })
     it('mentions "you" when lying', () => {
       const { queryAllByText } = render(<Mirror />)
-      expect(queryAllByText('you')).toBeTruthy()
-      expect(queryAllByText(/snow ?white/i)).toBeFalsy()
+      expect(queryAllByText(/you/)).toHaveLength(1)
+      expect(queryAllByText(/snow ?white/i)).toHaveLength(0)
     })
   })
   describe('using snapshot testing', () => {
