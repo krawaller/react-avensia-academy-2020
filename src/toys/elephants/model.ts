@@ -3,7 +3,7 @@ export type ElephantsState = {
   mood: 'calm' | 'happy'
 }
 
-export const initialState: ElephantsState = {
+export const initialElephantsState: ElephantsState = {
   count: 1,
   mood: 'calm',
 }

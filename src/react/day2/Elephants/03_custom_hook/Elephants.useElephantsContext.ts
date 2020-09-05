@@ -3,14 +3,14 @@ import { useState } from 'react'
 import {
   flipMoodInState,
   addElephantToState,
-  initialState,
+  initialElephantsState,
 } from '../../../../toys/elephants'
 
-export const useElephantsState = () => {
-  const [state, setState] = useState(initialState)
+export const useElephantsContext = () => {
+  const [state, setState] = useState(initialElephantsState)
 
   const switchMood = () => setState(flipMoodInState(state))
-  const fetchElephant = () => setState(addElephantToState(state))
+  const fetchElephant = () => setState(addElephantToState(state, 1))
   return {
     state,
     switchMood,

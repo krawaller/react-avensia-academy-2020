@@ -3,14 +3,14 @@ import {
   flipMoodInState,
   addElephantToState,
   makeLyrics,
-  initialState,
+  initialElephantsState,
 } from '../../../../toys/elephants'
 
 export const Elephants = () => {
-  const [state, setState] = useState(initialState)
+  const [state, setState] = useState(initialElephantsState)
 
   const switchMood = () => setState(flipMoodInState(state))
-  const fetchElephant = () => setState(addElephantToState(state))
+  const fetchElephant = () => setState(addElephantToState(state, 1))
 
   const song = makeLyrics(state)
 

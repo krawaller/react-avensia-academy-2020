@@ -1,10 +1,10 @@
-import { ElephantsState } from './model'
+import { ElephantsState, initialElephantsState } from './model'
 import { isAddElephantAction, isFlipElephantMoodAction } from './actions'
 import { addElephantToState } from './addElephantToState'
 import { flipMoodInState } from './flipMoodInState'
 
-export const elephantReducer = (
-  state: ElephantsState,
+export const elephantsReducer = (
+  state: ElephantsState | undefined = initialElephantsState,
   action: any
 ): ElephantsState => {
   if (isAddElephantAction(action)) {
@@ -20,8 +20,8 @@ export const elephantReducer = (
 
 import { ADD_ELEPHANT, FLIP_ELEPHANT_MOOD, ElephantsAction } from './actions'
 
-const elephantReducer2 = (
-  state: ElephantsState,
+const elephantsReducer2 = (
+  state: ElephantsState | undefined = initialElephantsState,
   action: ElephantsAction
 ): ElephantsState => {
   switch (action.type) {
