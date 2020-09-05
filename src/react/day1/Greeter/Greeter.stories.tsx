@@ -1,16 +1,12 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 import { Greeter } from './Greeter'
-import { makeStory } from '../../../utils'
 
-// These stories are defined using newer storybook API! Scope uses the old API, which you can find
-// examples of in all other components.
-
-export default {
-  title: 'Day 1/Props/Greeter',
-  component: Greeter,
-}
-
-export const HelloAvensia = makeStory(Greeter, {
-  name: 'Avensia',
-})
-
-export const HelloNobody = makeStory(Greeter, {})
+storiesOf('Day 1/Props/Greeter', module)
+  .add('hello avensia', () => {
+    const someone = 'Avensia'
+    return <Greeter name={someone} />
+  })
+  .add('hello without name', () => {
+    return <Greeter />
+  })
