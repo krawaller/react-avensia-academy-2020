@@ -1,14 +1,18 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { GlitzClient } from '@glitz/core'
 import { GlitzProvider } from '@glitz/react'
 import { glitzOptions } from '../glitz.options'
+import { store } from '../src/toys/redux/store'
 
-let glitz = new GlitzClient(glitzOptions)
+const glitz = new GlitzClient(glitzOptions)
 
 export const decorators = [
   (Story) => (
     <GlitzProvider glitz={glitz}>
-      <Story />
+      <Provider store={store}>
+        <Story />
+      </Provider>
     </GlitzProvider>
   ),
 ]

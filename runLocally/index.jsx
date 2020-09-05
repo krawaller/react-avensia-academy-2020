@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { store } from '../src/toys/redux/store'
 
 import { GlitzClient } from '@glitz/core'
 import { GlitzProvider } from '@glitz/react'
 import { glitzOptions } from '../glitz.options'
-let glitz = new GlitzClient(glitzOptions)
+const glitz = new GlitzClient(glitzOptions)
 
 /*
 To run a component locally, simply...
@@ -19,6 +21,8 @@ import { Carolus } from '../src/react/day1/Carolus/Carolus.Glitz'
 const jsx = <Carolus />
 
 ReactDOM.render(
-  <GlitzProvider glitz={glitz}>{jsx}</GlitzProvider>,
+  <GlitzProvider glitz={glitz}>
+    <Provider store={store}>{jsx}</Provider>
+  </GlitzProvider>,
   document.getElementById('root')
 )

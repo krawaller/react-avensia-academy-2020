@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-
 import { flipElephantMood, addElephant } from '../../../../toys/elephants'
-
 import { store } from '../../../../toys/redux'
 
 export const useElephantsContext = () => {
