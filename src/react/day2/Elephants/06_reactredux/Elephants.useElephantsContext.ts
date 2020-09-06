@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { flipElephantMood, addElephant } from '../../../../toys/elephants'
-import { selectElephantsState } from '../../../../toys/redux'
+import { flipElephantMood, addElephant } from '../../../../logic/elephants'
+import { selectElephantsState } from '../../../../logic/redux'
 
 export const useElephantsContext = () => {
   const state = useSelector(selectElephantsState)

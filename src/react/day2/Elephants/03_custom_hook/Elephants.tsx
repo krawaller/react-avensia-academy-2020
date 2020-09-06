@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeLyrics } from '../../../../toys/elephants'
+import { makeLyrics } from '../../../../logic/elephants'
 
 import { useElephantsContext } from './Elephants.useElephantsContext'
 

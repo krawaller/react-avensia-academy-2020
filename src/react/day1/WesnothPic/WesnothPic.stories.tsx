@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 import { WesnothPic } from './WesnothPic'
-import { base64 } from '../../../toys/wesnoth'
+import { base64 } from '../../../logic/wesnoth'
 
 const picIds = Object.keys(base64).sort()
 

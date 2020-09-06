@@ -3,7 +3,7 @@ import {
   flipMoodInState,
   addElephantToState,
   initialElephantsState,
-} from '../../../../toys/elephants'
+} from '../../../../logic/elephants'
 
 export const useElephantsContext = () => {
   const [state, setState] = useState(initialElephantsState)

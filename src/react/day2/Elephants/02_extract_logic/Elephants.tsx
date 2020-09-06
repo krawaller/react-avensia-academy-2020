@@ -4,7 +4,7 @@ import {
   addElephantToState,
   makeLyrics,
   initialElephantsState,
-} from '../../../../toys/elephants'
+} from '../../../../logic/elephants'
 
 export const Elephants = () => {
   const [state, setState] = useState(initialElephantsState)

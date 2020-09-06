@@ -4,7 +4,7 @@ import {
   addElephant,
   initialElephantsState,
   elephantsReducer,
-} from '../../../../toys/elephants'
+} from '../../../../logic/elephants'
 
 export const useElephantsContext = () => {
   const [state, dispatch] = useReducer(elephantsReducer, initialElephantsState)

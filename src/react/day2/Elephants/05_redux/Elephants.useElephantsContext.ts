@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { flipElephantMood, addElephant } from '../../../../toys/elephants'
-import { store } from '../../../../toys/redux'
+import { flipElephantMood, addElephant } from '../../../../logic/elephants'
+import { store } from '../../../../logic/redux'
 
 export const useElephantsContext = () => {
   const [state, setState] = useState(store.getState().elephants)

@@ -1,5 +1,5 @@
 import React from 'react'
-import { base64 } from '../../../toys/wesnoth'
+import { base64 } from '../../../logic/wesnoth'
 
 export type WesnothPicProps = {
   id: string

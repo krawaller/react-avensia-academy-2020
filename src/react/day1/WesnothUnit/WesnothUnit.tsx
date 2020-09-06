@@ -1,5 +1,5 @@
 import React from 'react'
-import { Unit } from '../../../toys/wesnoth'
+import { Unit } from '../../../logic/wesnoth'
 import { WesnothPic } from '../WesnothPic'
 
 export type WesnothUnitProps = {
