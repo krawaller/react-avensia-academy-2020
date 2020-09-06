@@ -1,5 +1,5 @@
 import { getSessionStatus } from './getSessionStatus'
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 type PerformGuessOpts = {
   /**
@@ -14,9 +14,9 @@ type PerformGuessOpts = {
 
 /**
  * The main Hangman game logic. Takes a guess (a letter or a word) and
- * the current state, and returns an updated state
+ * the current session, and returns an updated session
  */
-export function performGuess(opts: PerformGuessOpts) {
+export function addGuessToSession(opts: PerformGuessOpts) {
   const { guess, session } = opts
   if (
     !guess || // ignore empty guesses

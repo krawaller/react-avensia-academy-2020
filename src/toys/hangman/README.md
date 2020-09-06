@@ -9,3 +9,4 @@ Suggested approach:
 1. Build a stateful app around the UI, using
    - `newSession`
    - `performGuess`
+     ...or by using the Redux store!

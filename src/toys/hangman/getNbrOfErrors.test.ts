@@ -1,5 +1,5 @@
 import { getNbrOfErrors } from './getNbrOfErrors'
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 describe('the getNbrOfErrors Hangman helper', () => {
   describe('when user has guessed nothing', () => {

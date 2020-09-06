@@ -1,5 +1,5 @@
 import { getNbrOfErrors } from './getNbrOfErrors'
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 /**
  * Helper function that takes a Hangman state and returns whether the

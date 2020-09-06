@@ -1,5 +1,5 @@
 import { getRevealedLetters } from './getRevealedLetters'
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 describe('the getRevealedLetters Hangman helper', () => {
   describe('when user has guessed nothing', () => {

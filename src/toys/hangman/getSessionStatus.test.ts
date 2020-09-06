@@ -1,5 +1,5 @@
 import { getSessionStatus } from './getSessionStatus'
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 describe('the getSessionStatus Hangman helper', () => {
   describe('when user has made max number of errors', () => {

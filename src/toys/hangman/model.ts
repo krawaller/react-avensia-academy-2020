@@ -6,3 +6,11 @@ export type HangmanSession = {
   answer: string // The secret word players are trying to guess
   maxGuesses: number // Total number of errors allowed
 }
+
+export type HangmanState = {
+  session: HangmanSession | null
+}
+
+export const initialHangmanState: HangmanState = {
+  session: null,
+}

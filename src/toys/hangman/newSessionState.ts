@@ -1,4 +1,4 @@
-type NewSessionOpts = {
+export type NewSessionStateOpts = {
   answer: string
   maxGuesses?: number
 }
@@ -6,7 +6,7 @@ type NewSessionOpts = {
 /**
  * Creates a new Hangman session
  */
-export const newSession = (opts: NewSessionOpts) => ({
+export const newSessionState = (opts: NewSessionStateOpts) => ({
   answer: opts.answer,
   maxGuesses: opts.maxGuesses || 4,
   guesses: [],

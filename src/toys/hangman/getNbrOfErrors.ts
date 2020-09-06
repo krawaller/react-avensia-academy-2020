@@ -1,4 +1,4 @@
-import { HangmanSession } from './types'
+import { HangmanSession } from './model'
 
 /**
  * Helper function that takes a Hangman session and returns the total number
