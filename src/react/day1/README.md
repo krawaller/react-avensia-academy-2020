@@ -18,7 +18,3 @@ We're gonna learn about...
   - how it works
   - what the point is
   - interpolation
-- Styling (deferred to day 3)
-  - CSS in JS basics
-  - React style prop
-  - Glitz
