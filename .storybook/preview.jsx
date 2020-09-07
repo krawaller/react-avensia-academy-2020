@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { GlitzClient } from '@glitz/core'
 import { GlitzProvider } from '@glitz/react'
 import { glitzOptions } from '../glitz.options'
-import { store } from '../src/toys/redux/store'
+import { store } from '../src/logic/redux/store'
 
 const glitz = new GlitzClient(glitzOptions)
 
